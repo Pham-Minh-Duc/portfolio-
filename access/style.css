@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 html {
-  font-family: Arimo;
+  font-family:"Philosopher", sans-serif;
+  font-weight: 250;
 }
 #main {
   position: relative;
@@ -40,6 +41,7 @@ img {
   padding: 25px 5px;
 }
 #nav li a {
+  font-family: "Arimo", sans-serif;
   text-decoration: none;
   color: black;
 }
@@ -93,33 +95,39 @@ img {
 #sub-slider > #shadow > .content {
   padding-bottom: 20px;
   color: #fff;
-  width: 600px;
+  width: 650px;
   margin-left: 80px;
   margin-top: 100px;
 }
 
 #sub-slider > #shadow > .content > h1 {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 400;
   padding-bottom: 20px;
-  font-size: 100px;
+  font-size: 85px;
 }
 #sub-slider > #shadow > .content > h5 {
+  font-family: "Arimo", sans-serif;
+  font-weight: 150;
+  font-style: italic;
   padding-bottom: 20px;
   font-size: 24px;
 }
 #sub-slider > #shadow > .content > p{
-  font-size: 18px;
-  line-height: 25px;
-  padding-bottom: 20px;
-
+  font-family: "Arimo", sans-serif;
+  font-weight: 50;
+  font-size: 16px;
+  line-height: 23px;
 }
 #sub-slider > #shadow > .content > button {
   color: white;
   border: 1px solid white;
-  padding: 11px 50px;
+  padding: 13px 40px;
   border-radius: 30px;
   background-color: transparent;
   cursor: pointer;
   width: 30%;
+  margin-top: 20px;
 }
 #main-content{
   position: absolute;
@@ -133,33 +141,50 @@ img {
     align-items: center;
     width: 500px;
     margin: 50px;
-    border: 1px solid black;
     padding: 40px;
 }
-
+#main-content #section #menu {
+  background: url(./img/menu.jpg);
+}
+#main-content #section #reservation {
+  background: url(./img/reservation.jpg);
+  font-family: "Philosopher", sans-serif;
+  font-weight: 200;
+}
 #main-content  #section{
  display: flex;
  height: 600px;
  justify-content: space-around;
 }
 #section .member-items h1{
+  font-family: "Philosopher", sans-serif;
+  color: #fff;
   margin-bottom: 24px;
-  font-size: 43px;
+  font-size: 35px;
+  font-weight: 100;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  padding: 10px;
 }
-#section .member-items img{
+/* #section .member-items img{
   width: 300px;
   height: 200px;
   padding: 0px;
   margin-left: 0;
   margin-bottom: 24px;
   border-radius: 50%;
-}
+} */
 #section .member-items button{
-  color: black;
-  border: 1px solid black;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
   padding: 13px 40px;
   border-radius: 30px;
   background-color: transparent;
   cursor: pointer;
   width: 40%;
+  font-family: "Philosopher", sans-serif;
+  font-size: 16px;
+}
+#section .member-items button:hover{
+  background-color: #a5a4a4;
 }
