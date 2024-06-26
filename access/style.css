@@ -166,14 +166,7 @@ img {
   border-bottom: 3px solid white;
   padding: 10px;
 }
-/* #section .member-items img{
-  width: 300px;
-  height: 200px;
-  padding: 0px;
-  margin-left: 0;
-  margin-bottom: 24px;
-  border-radius: 50%;
-} */
+
 #section .member-items button{
   color: whitesmoke;
   border: 2px solid whitesmoke;
@@ -184,7 +177,109 @@ img {
   width: 40%;
   font-family: "Philosopher", sans-serif;
   font-size: 16px;
+  transition: all 0.4s;
 }
 #section .member-items button:hover{
   background-color: #a5a4a4;
+}
+.animation{
+  transition: all 1s;
+  transform: translate3d(-50px, 0, 0);
+}
+
+.animation.active{
+  transform: translate3d(0, 0, 0);
+}
+#container{
+  position: absolute;
+  top: 1400px;
+  max-width: 1400px;
+  width: 95%;
+  height: 500px;
+}
+#feedbacks{
+  position: absolute;
+}
+.slide-button{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: #000;
+  font-size: 2.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slide-button:hover{
+  background: #444;
+}
+.slide-button#pre-slide{
+  left: -20px;
+}
+.slide-button#next-slide{
+  right: -20px;
+}
+#feedback-list{
+  display: grid;
+  gap: 18px;
+  scrollbar-width: none;
+  grid-template-columns: repeat(10, 1fr);
+  scrollbar-width: none;
+  overflow-x: auto;
+}
+#container #feedback-list::-webkit-scrollbar{
+  display: none;
+}
+
+ #feedback-list .feedback{
+  border: 1px solid black;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+}
+#feedback-list .feedback .name{
+  margin-bottom: 10px;
+}
+.container .slider-scrollbar{
+  height: 24px;
+  width: 100%;
+  background: red;
+}
+.slider-scrollbar .scrollbar-track  {
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  position: relative;
+  border-radius: 4px;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb  {
+  position: absolute;
+  height: 100%px;
+  width: 50%;
+  background: #000;
+  border-radius: inherit;
+  cursor: grab;
+}
+.slider-scrollbar .scrollbar-thumb:active{
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
 }

@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script type="module" src="ui.js"></script>
   </head>
   <body>
@@ -23,10 +25,10 @@
           <li><button>Reservation</button></li>
         </ul>
       </div>
-      <div id="slider"></div>
-      <div id="sub-slider">
-        <div id="shadow">
-          <div class="content">
+      <div id="slider" class="animation"></div>
+      <div id="sub-slider" class="animation">
+        <div id="shadow" class="animation">
+          <div class="content" class="animation">
             <h1>Ducking Dinner</h1>
             <h5>Where Every Bite is a Masterpiece</h5>
             <p>Welcome to "Ducking Restaurant" where culinary artistry meets the heart of HCM City.</p>
@@ -37,17 +39,75 @@
           </div>
         </div>
       </div>
-      <div id="main-content">
-        <div id="section">
-          <div id="menu" class="member-items">
-            <h1>see our menu</h1>
+      <div id="main-content" class="animation">
+        <div id="section" class="animation">
+          <div id="menu" class="member-items" class="animation">
+            <h1 class="animation">See our menu</h1>
             <!-- <img src="./access/img/menu.jpg" alt="" /> -->
             <button><i>Click here</i></button>
           </div>
-          <div id="reservation" class="member-items">
-            <h1>make your reservation</h1>
+          <div id="reservation" class="member-items" class="animation">
+            <h1 class="animation">Make your reservation</h1>
             <!-- <img src="./access/img/reservation.jpg" alt="" /> -->
             <button><i>Click here</i></button>
+          </div>
+        </div>
+      </div>
+      <div id="container">
+        <div id="feedbacks">
+          <button id="pre-slide" class="slide-button material-symbols-outlined">chevron_left</button>
+          <div id="feedback-list">
+              <div class="feedback">
+                <div class="name">Minh Duck</div>
+                <hr>
+                <div class="opinion">nhà hàng rất tuyệt !</div>
+              </div>
+              <div class="feedback">
+                <div class="name">Lân Hồ</div>
+                <hr>
+                <div class="opinion">chắc chắn sẽ đến lần nữa</div>
+              </div>
+              <div class="feedback">
+                <div class="name">Diệu Nguyễn</div>
+                <hr>
+                <div class="opinion">quá xuất sắc</div>
+              </div>
+              <div class="feedback">
+                <div class="name">Bảo Nguyễn</div>
+                <hr>
+                <div class="opinion">dịch vụ khá tốt !</div>
+              </div>
+              <div class="feedback">
+                <div class="name">Đào Lê</div>
+                <hr>
+                <div class="opinion">cũng tàm tạm...</div>
+              </div>
+              <div class="feedback">
+                <div class="name">Tú Xương</div>
+                <hr>
+                <div class="opinion">nice...</div>
+              </div>
+              <div class="feedback">
+                <div class="name">John Lê</div>
+                <hr>
+                <div class="opinion">wonderful !</div>
+              </div>
+              <div class="feedback">
+                <div class="name">John Lê</div>
+                <hr>
+                <div class="opinion">wonderful !</div>
+              </div>
+              <div class="feedback">
+                <div class="name">John Lê</div>
+                <hr>
+                <div class="opinion">wonderful !</div>
+              </div>
+          </div>
+          <button id="next-slide" class="slide-button material-symbols-outlined">chevron_right</button>
+        </div>
+        <div class="slider-scrollbar">
+          <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
           </div>
         </div>
       </div>
