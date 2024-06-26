@@ -190,17 +190,34 @@ img {
 .animation.active{
   transform: translate3d(0, 0, 0);
 }
-#container{
+.big-ctn{
   position: absolute;
-  top: 1400px;
-  max-width: 1400px;
-  width: 95%;
+  top: 2400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #F1F4FD;
+  width: 100%;
+  z-index: 1;
+}
+#container{
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
   height: 500px;
+  z-index: 150;
 }
 #feedbacks{
   position: absolute;
+  width: 100%;
+  height: 320px;
 }
-.slide-button{
+#feedback-list{
+  position: absolute;
+  z-index: 100;
+}
+#feedbacks .slide-button{
   position: absolute;
   height: 50px;
   width: 50px;
@@ -213,41 +230,45 @@ img {
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 200;
 }
-.slide-button:hover{
-  background: #444;
+#feedbacks  .slide-button:hover{
+  background-color: #444;
 }
-.slide-button#pre-slide{
-  left: -20px;
+#feedbacks .slide-button#pre-slide{
+  left: 0px;
 }
-.slide-button#next-slide{
-  right: -20px;
+#feedbacks .slide-button#next-slide{
+  right: 0;
 }
-#feedback-list{
+#feedbacks, #feedback-list{
   display: grid;
   gap: 18px;
-  scrollbar-width: none;
   grid-template-columns: repeat(10, 1fr);
-  scrollbar-width: none;
   overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 30px;
 }
-#container #feedback-list::-webkit-scrollbar{
+
+#feedbacks #feedback-list::-webkit-scrollbar{
   display: none;
 }
 
- #feedback-list .feedback{
+#feedbacks #feedback-list .feedback{
   border: 1px solid black;
   padding: 20px;
   margin: 10px;
   width: 200px;
+  height: 300px;
 }
 #feedback-list .feedback .name{
   margin-bottom: 10px;
 }
-.container .slider-scrollbar{
+#container .slider-scrollbar{
   height: 24px;
   width: 100%;
-  background: red;
+  display: flex;
+  align-items: center;
 }
 .slider-scrollbar .scrollbar-track  {
   height: 2px;
@@ -255,15 +276,16 @@ img {
   background: #ccc;
   position: relative;
   border-radius: 4px;
+  top: 320px;
 }
 
 .slider-scrollbar:hover .scrollbar-track {
-  height: 4px;
+  height: 3px;
 }
 
 .slider-scrollbar .scrollbar-thumb  {
   position: absolute;
-  height: 100%px;
+  height: 100%;
   width: 50%;
   background: #000;
   border-radius: inherit;
@@ -271,9 +293,10 @@ img {
 }
 .slider-scrollbar .scrollbar-thumb:active{
   cursor: grabbing;
-  height: 8px;
+  height: 5px;
   top: -2px;
 }
+
 
 .slider-scrollbar .scrollbar-thumb::after{
   content: "";
