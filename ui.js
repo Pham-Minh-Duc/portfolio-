@@ -1,3 +1,4 @@
+//start animation
 const animation = document.querySelectorAll('.animation')
 
 const observer = new IntersectionObserver(entries => {
@@ -11,8 +12,9 @@ const observer = new IntersectionObserver(entries => {
 animation.forEach(ani => {
     observer.observe(ani)
 });
+//end animation
 
-
+// start scroll feedback
 const initSlider = () => {
     const feedBackList = document.querySelector("#feedback-list");
     const slideButtons = document.querySelectorAll(".slide-button");
@@ -36,8 +38,79 @@ const initSlider = () => {
     })
 }
 
-
-
-
-
 window.addEventListener("load", initSlider);
+
+//end scroll feedback
+
+
+
+
+//start CRUD feedback
+var getURL = 'http://localhost:3000/feedBack'
+
+function start() {
+    getFeedBacks(renderFeedback)
+    handleCreateFeedbacks()
+}
+
+start()
+
+    //function
+function getFeedBacks(callback) {
+    fetch(getURL)
+        .then((response) => {
+            return response.json()
+        })
+        .then(callback)
+}
+
+function createFeedback(data, callback){
+    var options = {
+        method: "POST",
+        headers: {
+            'content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+    fetch(getURL, options)
+        .then((response) => {
+            response.json()
+        })
+        .then(callback)
+}
+//read
+function renderFeedback(feedbacks){
+    var listFb = document.querySelector('#feedback-list')
+    var htmls = feedbacks.map((feedback) => {
+        return `
+            <div class="feedback">
+                  <div class="name">${feedback.name}</div>
+                  <hr>
+                  <div class="opinion">${feedback.feedBack}</div>
+            </div>
+        `
+    })
+    listFb.innerHTML = htmls.join('')
+}
+// end read
+
+//add
+    function handleCreateFeedbacks(){
+        var createBtn = document.getElementById('addFb')
+
+        createBtn.onclick = function() {
+            var name = document.querySelector('input[name="name"]').value
+            var feedBack = document.querySelector('input[name="feedbackContent"]').value
+            
+            var formData = {
+                name: name,
+                feedBack: feedBack
+            }
+
+            createFeedback(formData, () => {
+                // getFeedBacks(renderFeedback)
+            })
+        }
+    }
+//end add
+//end CRUD feedback

@@ -194,9 +194,11 @@ img {
   position: absolute;
   top: 2400px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 600px;
   background: #F1F4FD;
   width: 100%;
   z-index: 1;
@@ -217,6 +219,7 @@ img {
   position: absolute;
   z-index: 100;
 }
+
 #feedbacks .slide-button{
   position: absolute;
   height: 50px;
@@ -239,7 +242,7 @@ img {
   left: 0px;
 }
 #feedbacks .slide-button#next-slide{
-  right: 0;
+  right: 0px;
 }
 #feedbacks, #feedback-list{
   display: grid;
@@ -305,4 +308,19 @@ img {
   right: 0;
   top: -10px;
   bottom: -10px;
+}
+
+.feedback-fill{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+}
+.feedback-fill h4{
+  width: 400px;
+  margin-left: 80px;
+}
+#fill-fb > .input{
+  display: flex;
+  flex-direction: column;
 }
