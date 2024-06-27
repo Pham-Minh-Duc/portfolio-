@@ -108,7 +108,7 @@ function renderFeedback(feedbacks){
             }
 
             createFeedback(formData, () => {
-                // getFeedBacks(renderFeedback)
+                getFeedBacks(renderFeedback)
             })
         }
     }
