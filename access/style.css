@@ -258,6 +258,7 @@ img {
 }
 
 #feedbacks #feedback-list .feedback{
+  position: relative;
   border: 1px solid black;
   padding: 20px;
   margin: 10px;
@@ -319,8 +320,39 @@ img {
 .feedback-fill h4{
   width: 400px;
   margin-left: 80px;
+  font-size: 30px;
 }
-#fill-fb > .input{
+#fill-fb .input{
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
+
+}
+#fill-fb input[name="name"]{
+  padding: 10px;
+  width: 150px;
+  margin-bottom: 10px;
+}
+#fill-fb input[name="feedbackContent"]{
+  padding: 10px;
+  width: 350px;
+}
+.feedback button{
+  position: absolute;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50px;
+    height: 20px;
+    margin-top:200px;
+}
+#fill-fb button{
+  padding: 10px;
+  border: black solid 1px;
+  margin-bottom: 10px;
+  background: transparent;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+#fill-fb button:hover{
+  background: #b75d5d;
 }

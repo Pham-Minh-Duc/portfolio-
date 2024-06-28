@@ -64,6 +64,7 @@ function getFeedBacks(callback) {
         .then(callback)
 }
 
+//create
 function createFeedback(data, callback){
     var options = {
         method: "POST",
@@ -78,21 +79,25 @@ function createFeedback(data, callback){
         })
         .then(callback)
 }
-//read
+
+//end create
+//render
 function renderFeedback(feedbacks){
     var listFb = document.querySelector('#feedback-list')
     var htmls = feedbacks.map((feedback) => {
+        console.log(typeof feedback.id);
         return `
             <div class="feedback">
                   <div class="name">${feedback.name}</div>
                   <hr>
                   <div class="opinion">${feedback.feedBack}</div>
+                  <button onclick="handleDeleteFeedback('${feedback.id}')">&times; xóa</button>
             </div>
         `
     })
     listFb.innerHTML = htmls.join('')
 }
-// end read
+// end render
 
 //add
     function handleCreateFeedbacks(){
@@ -101,7 +106,8 @@ function renderFeedback(feedbacks){
         createBtn.onclick = function() {
             var name = document.querySelector('input[name="name"]').value
             var feedBack = document.querySelector('input[name="feedbackContent"]').value
-            
+
+
             var formData = {
                 name: name,
                 feedBack: feedBack
@@ -113,4 +119,31 @@ function renderFeedback(feedbacks){
         }
     }
 //end add
+
+
+
+
+//delete
+    function handleDeleteFeedback(id){
+        var options = {
+            method: 'DELETE',
+            headers: {
+                'content-Type': 'application/json'
+            },
+        }
+        fetch(getURL + '/' + id, options)
+            .then((response) => {
+                response.json()
+            })
+            .then(()=>{
+                getFeedBacks(renderFeedback)
+            })
+    }
+//end delete
+
+
+
+//edit
+
+//end edit
 //end CRUD feedback
