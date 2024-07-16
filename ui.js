@@ -172,7 +172,7 @@ function createFeedback(data, callback){
                 </div>
             `
         })
-        listFb.innerHTML = htmls.join('')
+        // listFb.innerHTML = htmls.join('')    // hiển thị ra giao diện
     }
     // end render
 

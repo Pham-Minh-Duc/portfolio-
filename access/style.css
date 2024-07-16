@@ -15,7 +15,7 @@ html {
   top: 0;
   width: 100%;
   height: 100px;
-  background-color: white;
+  background-color: #d09441;
   left: 0;
   right: 0;
   z-index: 2;
@@ -51,11 +51,12 @@ img {
 }
 #nav li button {
   color: black;
-  border: 1px solid black;
+  border: none;
   padding: 11px 30px;
-  border-radius: 10px;
-  background-color: #fff;
+  border-radius: 15px;
+  background-color: white;
   cursor: pointer;
+
 }
 #slider {
   position: absolute;
@@ -192,134 +193,32 @@ img {
 }
 .big-ctn{
   position: absolute;
-  top: 1500px;
+  top: 1380px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* min-height: 100vh; */
-  height: 500px;
+  height: 600px;
   width: 100%;
-  z-index: 1;
-}
-/* #container{
-  position: relative;
-  max-width: 1100px;
-  width: 100%;
-  height: 500px;
-  z-index: 150;
-}
-#feedbacks{
-  position: absolute;
-  width: 100%;
-  height: 320px;
-}
-#feedback-list{
-  position: absolute;
-  z-index: 100;
-}
-
-#feedbacks .slide-button{
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  color: #fff;
-  border: none;
-  outline: none;
-  background: #000;
-  font-size: 2.2rem;
-  cursor: pointer;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 200;
-}
-#feedbacks  .slide-button:hover{
-  background-color: #444;
-}
-#feedbacks .slide-button#pre-slide{
-  left: 0px;
-}
-#feedbacks .slide-button#next-slide{
-  right: 0px;
-}
-#feedbacks, #feedback-list{
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(10, 1fr);
-  overflow-x: auto;
-  scrollbar-width: none;
-  margin-bottom: 30px;
-}
-
-#feedbacks #feedback-list::-webkit-scrollbar{
-  display: none;
-}
-
-#feedbacks #feedback-list .feedback{
-  position: relative;
-  border: 1px solid black;
-  padding: 20px;
-  margin: 10px;
-  width: 200px;
-  height: 300px;
-}
-#feedback-list .feedback .name{
-  margin-bottom: 10px;
-}
-#container .slider-scrollbar{
-  height: 24px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.slider-scrollbar .scrollbar-track  {
-  height: 2px;
-  width: 100%;
-  background: #ccc;
-  position: relative;
-  border-radius: 4px;
-  top: 320px;
-}
-
-.slider-scrollbar:hover .scrollbar-track {
-  height: 3px;
-}
-
-.slider-scrollbar .scrollbar-thumb  {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  background: #000;
-  border-radius: inherit;
-  cursor: grab;
-}
-.slider-scrollbar .scrollbar-thumb:active{
-  cursor: grabbing;
-  height: 5px;
-  top: -2px;
+  /* z-index: 1; */
+  /* margin-bottom: 100px; */
 }
 
 
-.slider-scrollbar .scrollbar-thumb::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -10px;
-  bottom: -10px;
-} */
 
 .comment{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 50vh;
-  background: #F1F4FD;
+  min-height: 60vh;
+  /* border: solid black 0.5px; */
+  /* height: 700px; */
+  /* background: #F1F4FD; */
 }
 
 #container{
-  max-width: 1200px;
+  max-width: 1150px;
   width: 95%;
 }
 
@@ -339,6 +238,7 @@ img {
   border: none;
   outline: none;
   transform: translateY(-50%);
+  z-index: 20;
 }
 
 #slider-wrapper .slide-button:hover{
@@ -367,11 +267,12 @@ img {
   display: none;
 }
 
-/* #slider-wrapper #image-list .image-item {
+#slider-wrapper #image-list .image-item {
+  position: relative;
   width: 325px;
   height: 400px;
   object-fit: cover;
-} */
+}
 
 #container .slider-scrollbar{
   height: 24px;
@@ -418,40 +319,32 @@ img {
 }
 
 
-.feedback{
-  position: relative;
-  border: 1px solid black;
-  padding: 20px;
-  margin: 10px;
-  width: 325px;
-  height: 400px;
-}
-.feedback .name{
-  margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
-
 
 
 .feedback-fill{
+  position: absolute;
+  top: 600px;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 200px;
+  padding-top: 50px;
+  padding-bottom: 200px;
+  border-radius: 30% 60%;
+  background-color: #d09441;
 }
 .feedback-fill h4{
   width: 400px;
   margin-left: 80px;
   font-size: 30px;
 }
+
+#fill-fb{
+  display: flex;
+  flex-direction: row;
+  height: 176px;
+}
+
 #fill-fb .input{
   display: flex;
   flex-direction: column;
@@ -461,12 +354,24 @@ img {
 #fill-fb input[name="name"]{
   padding: 10px;
   width: 150px;
+  font-family: "Philosopher", sans-serif;
+  font-size: 16px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
-#fill-fb input[name="feedbackContent"]{
-  padding: 10px;
+#fill-fb textarea[name="feedbackContent"]{
+  resize: none;
   width: 350px;
+  font-family: "Philosopher", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
+
 .feedback button{
     position: absolute;
     border: 1px solid black;
@@ -475,15 +380,42 @@ img {
     height: 30px;
     top: 360px;
     cursor: pointer;
+    
 }
 #fill-fb button{
   padding: 10px;
+  width: 150px;
+  height: 150px;
   border: black solid 1px;
+  margin-left: 50px;
   margin-bottom: 10px;
   background: transparent;
-  border-radius: 10px;
+  border-radius: 50%;
   transition: all 0.4s;
+  font-family: "Philosopher", sans-serif;
+  font-size: 30px;
 }
 #fill-fb button:hover{
-  background: #b75d5d;
+  background: #df8c06;
+}
+
+#footer{
+  position: absolute;
+  top: 1000px;
+  width: 100%;
+  height: 400px;
+  /* background-color: #ccc; */
+}
+
+#footer-main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+}
+hr{
+  margin: 0 70px;
+}
+
+#footer-main .footer-section:first-child{
+  margin-top: 50px;
 }
