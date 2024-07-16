@@ -18,7 +18,7 @@ html {
   background-color: #d09441;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 2000;
 }
 img {
   height: 100px;

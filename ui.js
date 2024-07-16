@@ -182,7 +182,7 @@ function createFeedback(data, callback){
 
         createBtn.onclick = function() {
             var name = document.querySelector('input[name="name"]').value
-            var feedBack = document.querySelector('input[name="feedbackContent"]').value
+            var feedBack = document.querySelector('textarea[name="feedbackContent"]').value
 
 
             var formData = {
@@ -194,6 +194,19 @@ function createFeedback(data, callback){
                 getFeedBacks(renderFeedback)
             })
         }
+
+
+        createBtn.addEventListener("click", () => {
+            var name = document.querySelector('input[name="name"]').value.trim()
+            var feedBack = document.querySelector('textarea[name="feedbackContent"]').value.trim()
+
+        if(name === '' || feedBack === ''){
+            alert("please type something !")
+        }
+        else{
+            alert("thank you for your feedback")
+        }
+        })
     }
     //end add
 
