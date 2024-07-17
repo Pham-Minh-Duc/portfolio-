@@ -20,7 +20,7 @@ html {
   right: 0;
   z-index: 2000;
 }
-img {
+img#logo {
   height: 100px;
   width: 100px;
   padding-left: 10px;
@@ -166,6 +166,7 @@ img {
   border-top: 3px solid white;
   border-bottom: 3px solid white;
   padding: 10px;
+  border-radius: 30% 5%;
 }
 
 #section .member-items button{
@@ -320,6 +321,14 @@ img {
 
 
 
+.image-bg{
+  /* position: absolute;
+  top: 600px;
+  background-image: url(./img/imageList/3.jpg);
+  width: 100%;
+  height: 250px;
+  z-index: 1; */
+}
 
 .feedback-fill{
   position: absolute;
@@ -332,6 +341,7 @@ img {
   padding-bottom: 200px;
   border-radius: 30% 60%;
   background-color: #d09441;
+  /* background-image: url(./access/img/menu.jpg); */
 }
 .feedback-fill h4{
   width: 400px;
@@ -401,21 +411,72 @@ img {
 
 #footer{
   position: absolute;
-  top: 1000px;
+  top: 2300px;
   width: 100%;
   height: 400px;
-  /* background-color: #ccc; */
+  background-color: #ccc;
 }
 
-#footer-main{
+#footer-container{
   width: 100%;
-  display: grid;
-  grid-template-columns: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 hr{
   margin: 0 70px;
 }
+#footer-container .footer-section:first-child{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+}
+.footer-section:first-child .icon i{
+  margin: 10px;
+}
+.footer-section:first-child .icon a{
+  text-decoration: none;
+  color: #000;
+}
+.footer-section:first-child .icon i:hover{
+  cursor: pointer;
+}
+.footer-section:first-child .icon{
+  margin-top: 10px;
+  text-align: center;
+}
 
-#footer-main .footer-section:first-child{
-  margin-top: 50px;
+.fs-header{
+  font-family:"Philosopher", sans-serif;
+  font-size: 50px;
+  margin: auto auto;
+  grid-area: header;
+}
+.fs-main1{
+  grid-area: main1;
+}
+.fs-main2{
+  grid-area: main2;
+}
+.fs-main3{
+  grid-area: main3;
+}
+.fs-footer{
+  margin: 0 auto;
+  grid-area: footer;
+}
+#footer-container .footer-section:last-child{
+  display: grid;
+  grid-template-columns: 300px 300px 320px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+            "header header header"
+            "main1 main2 main3"
+            "footer footer footer";
+}
+
+.footer-section h4{
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
