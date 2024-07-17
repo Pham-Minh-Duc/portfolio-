@@ -321,38 +321,33 @@ img#logo {
 
 
 
-.image-bg{
-  /* position: absolute;
-  top: 600px;
-  background-image: url(./img/imageList/3.jpg);
-  width: 100%;
-  height: 250px;
-  z-index: 1; */
-}
-
 .feedback-fill{
   position: absolute;
   top: 600px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   height: 200px;
   padding-top: 50px;
   padding-bottom: 200px;
   border-radius: 30% 60%;
   background-color: #d09441;
-  /* background-image: url(./access/img/menu.jpg); */
 }
 .feedback-fill h4{
+
   width: 400px;
   margin-left: 80px;
   font-size: 30px;
 }
 
 #fill-fb{
+  right: 150px;
   display: flex;
   flex-direction: row;
   height: 176px;
+  margin-right: 180px;
+  margin-top: 20px;
 }
 
 #fill-fb .input{
@@ -422,6 +417,7 @@ img#logo {
   height: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 hr{
   margin: 0 70px;
