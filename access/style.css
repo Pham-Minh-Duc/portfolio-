@@ -10,6 +10,18 @@ html {
 #main {
   position: relative;
 }
+:root{
+  --line-height-25: 25px;
+  --mt-10: 10px;
+}
+/* a {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+} */
 #header {
   position: fixed;
   top: 0;
@@ -168,7 +180,14 @@ img#logo {
   padding: 10px;
   border-radius: 30% 5%;
 }
-
+#section .member-items a{
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
 #section .member-items button{
   color: whitesmoke;
   border: 2px solid whitesmoke;
@@ -461,6 +480,13 @@ hr{
 .fs-footer{
   margin: 0 auto;
   grid-area: footer;
+}
+
+.fs-main1 p, .fs-main2 p, .fs-main3 p{
+  line-height: var(--line-height-25);
+}
+.fs-main1,.fs-main2,.fs-main3{
+  margin-top: var(--mt-10);
 }
 #footer-container .footer-section:last-child{
   display: grid;
